@@ -12,10 +12,10 @@
     />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="h-full">
-    <header class="bg-[#F3F3F3] h-screen px-10">
+  <body class="h-full overflow-x-hidden">
+    <header class="bg-[#F3F3F3] h-screen pt-2 px-8 flex flex-col font-[poppins] border-b border-[#DDDDDD]">
       <nav class="nav flex justify-between items-center px-13 h-20">
-        <img src="logo.png" class="h-10.5" alt="" />
+        <img src="img/logo.png" class="h-10.5" alt="" />
         <ul class="nav_links flex justify-around text-[17px] items-center">
           <li class="text-[rgb(68,68,68)] ml-10 nav_item">
             <a class="nav_link" href="">Features</a>
@@ -29,12 +29,40 @@
           <li
             class="text-[#222] ml-10 nav_item rounded-full px-[1.4rem] py-[0.65rem] bg-[#5EC576]"
           >
-            <a class="nav_link" href="">Open account</a>
+            <a class="nav_link cursor-pointer" href="">Open account</a>
           </li>
         </ul>
       </nav>
-      <div class="hero"></div>
+      <div
+        class="hero flex-1 w-full grid grid-cols-[3fr_2fr] mx-auto px-35 content-center"
+      >
+        <h1 class="text-[55px] font-semibold -mt-10 text-[#444444]">
+          When
+          <span class="px-0.5 scale-x-[1.07] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
+            >banking</span
+          >
+          meets
+          <br>
+          <span class="-mt-2 px-0.5 scale-x-[1.07] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
+            >minimalist</span
+          >
+        </h1>
+        <h4 class="text-[24px] font-medium text-[#444444] ">
+          A simpler banking experience for a simpler life.
+        </h4>
+        <button
+          class="text-[17px] font-medium text-[rgb(94,197,118)] border-b border-[#5EC576] place-self-start cursor-pointer"
+        >
+          Learn more ↓
+        </button>
+        <img
+          src="img/hero.png"
+          class="h-84 row-start-1 row-span-3 col-start-2 -mt-18"
+          alt=""
+        />
+      </div>
     </header>
+    <div class="h-screen w-screen bg-[#F3F3F3]"></div>
     <script src="script.js"></script>
   </body>
 </html>
