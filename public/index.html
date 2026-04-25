@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="h-full overflow-x-hidden">
-    <header class="bg-[#F3F3F3] h-screen pt-2 px-8 flex flex-col font-[poppins] border-b border-[#DDDDDD]">
+    <header
+      class="bg-[#F3F3F3] h-screen pt-2 px-8 flex flex-col font-[poppins] border-b border-[#DDDDDD]"
+    >
       <nav class="nav flex justify-between items-center px-13 h-20">
-        <img src="img/logo.png" class="h-10.5" alt="" />
+        <img src="img/logo.png" class="h-11" alt="" />
         <ul class="nav_links flex justify-around text-[17px] items-center">
           <li class="text-[rgb(68,68,68)] ml-10 nav_item">
             <a class="nav_link" href="">Features</a>
@@ -38,16 +40,18 @@
       >
         <h1 class="text-[55px] font-semibold -mt-10 text-[#444444]">
           When
-          <span class="px-0.5 scale-x-[1.07] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
+          <span
+            class="px-0.5 scale-x-[1.05] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
             >banking</span
           >
           meets
-          <br>
-          <span class="-mt-2 px-0.5 scale-x-[1.07] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
+          <br />
+          <span
+            class="-mt-2 px-0.5 scale-x-[1.07] scale-y-[1.02] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
             >minimalist</span
           >
         </h1>
-        <h4 class="text-[24px] font-medium text-[#444444] ">
+        <h4 class="text-[24px] font-medium text-[#444444]">
           A simpler banking experience for a simpler life.
         </h4>
         <button
@@ -62,7 +66,64 @@
         />
       </div>
     </header>
-    <div class="h-screen w-screen bg-[#F3F3F3]"></div>
+    <section class="w-screen 1_section bg-[#F3F3F3] px-[3rem] py-[9rem] border-b border-[#DDDDDD]">
+      <div class="text-[poppins] w-3xl mb-20 mx-auto ">
+        <h2
+          class="text-[18px] font-semibold leading-8.5 text-[rgb(94,197,118)] mb-2"
+        >
+          FEATURES
+        </h2>
+        <h3
+          class="text-[40px] text-[rgb(68,68,68)] leading-tight font-semibold tracking-[0.01em]"
+        >
+          Everything you need in a modern bank and more.
+        </h3>
+      </div>
+      <div class="grid grid-cols-2 mx-29 gap-[2.7rem] text-[poppins]">
+        <img src="img/digital.jpg" alt="" />
+        <div class="feature">
+          <div class="feature__icon mb-[0.75rem]">
+            <svg width="60" height="60">
+              <use xlink:href="img/icons.svg#icon-monitor"></use>
+            </svg>
+          </div>
+          <h5 class="text-[20px] text-[rgb(68,68,68)] font-bold leading-[38px] mb-[0.75rem]">100% digital bank</h5>
+          <p class="text-[17px] text-[#666] font-light leading-[29px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
+            sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
+            debitis ducimus.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon mb-[0.75rem]">
+            <svg width="60" height="60">
+              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+            </svg>
+          </div>
+          <h5 class="text-[20px] text-[rgb(68,68,68)] font-bold leading-[38px] mb-[0.75rem]">Watch your money grow</h5>
+          <p class="text-[17px] text-[#666] font-light leading-[29px]">
+            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+            quibusdam!
+          </p>
+        </div>
+        <img src="img/grow.jpg" alt="" />
+        <img src="img/card.jpg" alt="" />
+        <div class="feature">
+          <div class="feature__icon mb-[0.75rem]">
+            <svg width="60" height="60">
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <h5 class="text-[20px] text-[rgb(68,68,68)] font-bold leading-[38px] mb-[0.75rem]">Free debit card included</h5>
+          <p class="text-[17px] text-[#666] font-light leading-[29px]">
+            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+            eveniet consequatur odit quam quos possimus assumenda dicta fuga
+            inventore ab.
+          </p>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

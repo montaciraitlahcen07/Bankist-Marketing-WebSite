@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@source "../public";
+@theme {
+}
+.feature { 
+    justify-self: center;
+    align-self: center;
+    width: 70%;
+}
+.feature__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #d1e9d7;
+}
+
+.feature__icon svg {
+  width: 25px;
+  height: 25px;
+  color: #5ec576;
+  fill: none;
+}

@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @tailwindcss/cli -i public/style.css -o public/output.css --watch",
+    "dev": "npx @tailwindcss/cli -i ../public/style.css -o ../public/output.css --watch",
     "prettier": "npx prettier . --write"
   },
   "dependencies": {
