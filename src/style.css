@@ -2,19 +2,36 @@
 @source "../public";
 @theme {
 }
-.feature { 
-    justify-self: center;
-    align-self: center;
-    width: 70%;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.feature {
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+  font-size: 1.5rem;
 }
 .feature__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55px;
-  height: 55px;
   border-radius: 50%;
   background-color: #d1e9d7;
+  width: 55px;
+  height: 55px;
 }
 
 .feature__icon svg {
@@ -23,3 +40,31 @@
   color: #5ec576;
   fill: none;
 }
+
+.operations_btn {
+  display: inline-block;
+  margin-right: 2.5rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1.25rem 4.5rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  transform: translateY(-50%);
+}
+
+.operations_btn span {
+  font-weight: 600;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.operations_btn:last-child {
+  margin-right: 0;
+}
+.operations_btn:first-child {
+  transform: translateY(-66%);
+}
+
