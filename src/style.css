@@ -104,3 +104,13 @@ body {
 .slide {
   transition: transform 1s;
 }
+.footer_item {
+  margin-right: 4rem;
+}
+.footer_item a {
+  font-size: 1.6rem;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 300;
+  line-height: 30px;
+}
