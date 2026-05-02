@@ -232,6 +232,9 @@
   .mb-\[4rem\] {
     margin-bottom: 4rem;
   }
+  .mb-\[6rem\] {
+    margin-bottom: 6rem;
+  }
   .mb-\[8rem\] {
     margin-bottom: 8rem;
   }
@@ -421,6 +424,9 @@
   .rounded-\[3rem\] {
     border-radius: 3rem;
   }
+  .rounded-\[10rem\] {
+    border-radius: 10rem;
+  }
   .rounded-\[50\%\] {
     border-radius: 50%;
   }
@@ -449,8 +455,14 @@
   .bg-\[\#5EC576\] {
     background-color: #5EC576;
   }
+  .bg-\[\#5ec576\] {
+    background-color: #5ec576;
+  }
   .bg-\[\#888\] {
     background-color: #888;
+  }
+  .bg-\[\#37383D\] {
+    background-color: #37383D;
   }
   .bg-\[\#F3F3F3\] {
     background-color: #F3F3F3;
@@ -479,14 +491,26 @@
   .px-\[3rem\] {
     padding-inline: 3rem;
   }
+  .px-\[5rem\] {
+    padding-inline: 5rem;
+  }
   .px-\[6rem\] {
     padding-inline: 6rem;
+  }
+  .py-\[1-\] {
+    padding-block: 1-;
   }
   .py-\[1\.1rem\] {
     padding-block: 1.1rem;
   }
+  .py-\[2rem\] {
+    padding-block: 2rem;
+  }
   .py-\[9rem\] {
     padding-block: 9rem;
+  }
+  .py-\[10rem\] {
+    padding-block: 10rem;
   }
   .py-\[15rem\] {
     padding-block: 15rem;
@@ -512,6 +536,9 @@
   .pl-\[7rem\] {
     padding-left: 7rem;
   }
+  .text-center {
+    text-align: center;
+  }
   .font-\[poppins\] {
     font-family: poppins;
   }
@@ -520,6 +547,9 @@
   }
   .text-\[1\.8rem\] {
     font-size: 1.8rem;
+  }
+  .text-\[1\.9rem\] {
+    font-size: 1.9rem;
   }
   .text-\[2\.4rem\] {
     font-size: 2.4rem;
@@ -586,6 +616,12 @@
   .text-\[\#444444\] {
     color: #444444;
   }
+  .text-\[\#FFFFFF\] {
+    color: #FFFFFF;
+  }
+  .text-\[1\/9rem\] {
+    color: 1/9rem;
+  }
   .text-\[rgb\(68\,68\,68\)\] {
     color: rgb(68,68,68);
   }
@@ -631,6 +667,10 @@
   .duration-\[0\.3s\] {
     --tw-duration: 0.3s;
     transition-duration: 0.3s;
+  }
+  .duration-\[0\] {
+    --tw-duration: 0;
+    transition-duration: 0;
   }
   .before\:absolute {
     &::before {
