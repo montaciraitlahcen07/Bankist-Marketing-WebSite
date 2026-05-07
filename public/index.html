@@ -49,7 +49,6 @@
             >banking</span
           >
           meets
-          <br />
           <span
             class="px-3 scale-x-[1.07] scale-y-[1.07] relative before:content-[''] before:absolute before:inset-0 before:bg-linear-to-tl before:from-[#72C7A5] before:to-[#B2E58A] before:skew-x-[-15deg] before:-z-10 inline-block"
             >minimalist</span
@@ -164,22 +163,22 @@
       <div
         class="operations bg-[#FFFFFF] max-w-[100rem] mx-auto mt-[12rem] relative"
       >
-        <div class="flex justify-center">
-          <button class="operations_btn bg-[#FFCB03] hover:bg-[#FFBB00]">
+        <div class="tabbed_component flex justify-center">
+          <button class="operations_btn bg-[#FFCB03] hover:bg-[#FFBB00] translate-y-[-66%]" component="first">
             <span class="">01</span>
             Instant Transfers
           </button>
-          <button class="operations_btn bg-[#5EC576] hover:bg-[#4BBB7D]">
+          <button class="operations_btn bg-[#5EC576] hover:bg-[#4BBB7D] translate-y-[-50%]" component="second">
             <span class="">02</span>
             Instant Loans
           </button>
-          <button class="operations_btn bg-[#FF585F] hover:bg-[#FD424B]">
+          <button class="operations_btn bg-[#FF585F] hover:bg-[#FD424B] translate-y-[-50%]" component="third">
             <span class="">03</span>
             Instant Closing
           </button>
         </div>
         <div
-          class="grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem]"
+          id="first" class="tab grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem]"
         >
           <div
             class="operation__icon flex items-center justify-center rounded-[50%] w-[7rem] h-[7rem] row-start-1 row-span-2"
@@ -202,7 +201,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem] hidden"
+          id="second" class="tab grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem] hidden"
         >
           <div
             class="operation__icon flex items-center justify-center rounded-[50%] w-[7rem] h-[7rem] row-start-1 row-span-2"
@@ -225,7 +224,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem] hidden"
+          id="third" class="tab grid grid-cols-[7rem_1fr] gap-x-[3rem] gap-y-[0.5rem] operations_content pt-[2.5rem] pr-[7rem] pb-[6.5rem] pl-[7rem] text-[1.7rem] hidden"
         >
           <div
             class="operation__icon flex items-center justify-center rounded-[50%] w-[7rem] h-[7rem] row-start-1 row-span-2"
