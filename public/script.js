@@ -1,6 +1,9 @@
 "use strict";
 const btnScrollToElement = document.querySelector(".btn--scroll-to");
 const firstSectionElement = document.querySelector("#first_section");
+const secondSectionElement = document.querySelector("#second_section");
+const thirdSectionElement = document.querySelector("#third_section");
+const fourthSectionElement = document.querySelector("#fourth_section");
 const navLinksElement = document.querySelector(".nav_links");
 const tabbedComponentElement = document.querySelector(".tabbed_component");
 const navElement = document.querySelector(".nav");
@@ -69,10 +72,60 @@ const stickyNavigation = function (entries, observer) {
   else navElement.classList.add("Sticky");
 };
 const navHeight = navElement.getBoundingClientRect().height;
-const obsOptions = {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
+const obsNavOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
 };
-const observer = new IntersectionObserver(stickyNavigation, obsOptions);
+const observer = new IntersectionObserver(stickyNavigation, obsNavOptions);
 observer.observe(headerElement);
+
+const revealSection = function (entries, observer) {
+  if (entries[0].isIntersecting) {
+    this.classList.remove("section--hidden");
+    observer.unobserve(this);
+  }
+};
+const obsFirstSectionOptions = {
+  root: null,
+  threshold: 0.15,
+  // rootMargin: `-${navHeight}px`,
+};
+const observerFirstSection = new IntersectionObserver(
+  revealSection.bind(firstSectionElement),
+  obsFirstSectionOptions,
+);
+observerFirstSection.observe(firstSectionElement);
+
+const obsSecondSectionOptions = {
+  root: null,
+  threshold: 0.15,
+  // rootMargin: `-${navHeight}px`,
+};
+const observerSecondSection = new IntersectionObserver(
+  revealSection.bind(secondSectionElement),
+  obsSecondSectionOptions,
+);
+observerSecondSection.observe(secondSectionElement);
+
+const obsThirdSectionOptions = {
+  root: null,
+  threshold: 0.15,
+  // rootMargin: `-${navHeight}px`,
+};
+const observerThirdSection = new IntersectionObserver(
+  revealSection.bind(thirdSectionElement),
+  obsThirdSectionOptions,
+);
+observerThirdSection.observe(thirdSectionElement);
+
+const obsFourthSectionOptions = {
+  root: null,
+  threshold: 0.15,
+  // rootMargin: `-${navHeight}px`,
+};
+const observerFourthSection = new IntersectionObserver(
+  revealSection.bind(fourthSectionElement),
+  obsFourthSectionOptions,
+);
+observerFourthSection.observe(fourthSectionElement);
