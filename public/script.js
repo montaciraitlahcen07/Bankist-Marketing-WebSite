@@ -4,6 +4,7 @@ const firstSectionElement = document.querySelector("#first_section");
 const navLinksElement = document.querySelector(".nav_links");
 const tabbedComponentElement = document.querySelector(".tabbed_component");
 const navElement = document.querySelector(".nav");
+const headerElement = document.querySelector("header");
 btnScrollToElement.addEventListener("click", () => {
   firstSectionElement.scrollIntoView({ behavior: "smooth" });
 });
@@ -48,23 +49,30 @@ navElement.addEventListener("mouseover", function (e) {
     const target = e.target;
     const siblings = target.closest(".nav").querySelectorAll(".nav_link");
     const logo = target.closest(".nav").querySelector("#img");
-    siblings.forEach(el => {
-        if(el != target) el.classList.add('opacity-[.5]');
-    })
-    logo.classList.add('opacity-[.5]');
+    siblings.forEach((el) => {
+      if (el != target) el.classList.add("opacity-[.5]");
+    });
+    logo.classList.add("opacity-[.5]");
   }
 });
 navElement.addEventListener("mouseout", function (e) {
-    const target = e.target;
-    const siblings = target.closest(".nav").querySelectorAll(".nav_link");
-    const logo = target.closest(".nav").querySelector("#img");
-    siblings.forEach((el) => {
-      if (el != target) el.classList.remove("opacity-[.5]");
-    });
-    logo.classList.remove("opacity-[.5]");
+  const target = e.target;
+  const siblings = target.closest(".nav").querySelectorAll(".nav_link");
+  const logo = target.closest(".nav").querySelector("#img");
+  siblings.forEach((el) => {
+    if (el != target) el.classList.remove("opacity-[.5]");
+  });
+  logo.classList.remove("opacity-[.5]");
 });
-const firstSectionTop = firstSectionElement.getBoundingClientRect().top;
-window.addEventListener('scroll', function() {
-    if(window.scrollY > firstSectionTop) navElement.classList.add('Sticky');
-    else navElement.classList.remove('Sticky');
-});
+const stickyNavigation = function (entries, observer) {
+  if (entries[0].isIntersecting) navElement.classList.remove("Sticky");
+  else navElement.classList.add("Sticky");
+};
+const navHeight = navElement.getBoundingClientRect().height;
+const obsOptions = {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+};
+const observer = new IntersectionObserver(stickyNavigation, obsOptions);
+observer.observe(headerElement);
