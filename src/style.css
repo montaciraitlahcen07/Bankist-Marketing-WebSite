@@ -125,3 +125,7 @@ body {
   opacity: 0;
   transform: translateY(8rem);
 }
+
+.lazy--loading {
+  filter: blur(20px);
+}

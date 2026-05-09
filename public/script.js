@@ -129,3 +129,22 @@ const observerFourthSection = new IntersectionObserver(
   obsFourthSectionOptions,
 );
 observerFourthSection.observe(fourthSectionElement);
+
+const lazyLoading = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy--loading");
+  });
+  observer.unobserve(entry.target);
+};
+const lazyObserver = new IntersectionObserver(lazyLoading, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px'
+});
+const lazyImg = document.querySelectorAll("img[data-src]");
+lazyImg.forEach((img) => {
+  lazyObserver.observe(img);
+});

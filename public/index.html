@@ -19,7 +19,7 @@
       <nav
         class="nav flex justify-between h-[9rem] w-full items-center px-[6rem]"
       >
-        <img id="img" src="img/logo.png" class="h-[45px]" alt="" />
+        <img id="img" src="img/logo.png" class="h-[45px] lazy--hidden" alt="" />
         <ul class="nav_links flex justify-around text-[17px] items-center">
           <li class="text-[rgb(68,68,68)] ml-[4rem] nav_item">
             <a class="block nav_link" href="#first_section">Features</a>
@@ -64,6 +64,7 @@
         </button>
         <img
           src="img/hero.png"
+          data-src="img/hero-lazy.png"
           class="w-full row-start-1 row-span-3 col-start-2 transform translate-y-[-6rem]"
           alt=""
         />
@@ -85,7 +86,7 @@
       <div
         class="grid grid-cols-[1fr_1fr] mx-[12rem] gap-[4rem] font-[poppins]"
       >
-        <img class="w-full" src="img/digital.jpg" alt="" />
+        <img class="w-full lazy--loading" src="img/digital.jpg" data-src="img/digital-lazy.jpg" alt="" />
         <div class="feature">
           <div class="feature__icon mb-[0.75rem]">
             <svg width="60" height="60">
@@ -124,8 +125,8 @@
             quibusdam!
           </p>
         </div>
-        <img src="img/grow.jpg" alt="" />
-        <img src="img/card.jpg" alt="" />
+        <img class="lazy--loading" src="img/grow.jpg" data-src="img/grow-lazy.jpg" alt="" />
+        <img class="lazy--loading" src="img/card.jpg" data-src="img/card-lazy.jpg" alt="" />
         <div class="feature">
           <div class="feature__icon mb-[0.75rem]">
             <svg width="60" height="60">
