@@ -46,7 +46,6 @@ body {
   border: none;
   border-radius: 10rem;
   transition: all 0.3s;
-  /* transform: translateY(-50%); */
 }
 .operations_btn span {
   font-weight: 600;
@@ -55,9 +54,6 @@ body {
 }
 .operations_btn:last-child {
   margin-right: 0;
-}
-.operations_btn:first-child {
-  /* transform: translateY(-66%); */
 }
 .testimonial::before {
   position: absolute;

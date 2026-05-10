@@ -8,6 +8,11 @@ const navLinksElement = document.querySelector(".nav_links");
 const tabbedComponentElement = document.querySelector(".tabbed_component");
 const navElement = document.querySelector(".nav");
 const headerElement = document.querySelector("header");
+const rightBtnElement = document.querySelector(".btn--right");
+const leftBtnElement = document.querySelector(".btn--left");
+const sliderElement = document.querySelector(".slider");
+const slidesElement = document.querySelectorAll(".slide");
+const dotsElement = document.querySelector(".dots");
 btnScrollToElement.addEventListener("click", () => {
   firstSectionElement.scrollIntoView({ behavior: "smooth" });
 });
@@ -142,9 +147,82 @@ const lazyLoading = function (entries, observer) {
 const lazyObserver = new IntersectionObserver(lazyLoading, {
   root: null,
   threshold: 0,
-  rootMargin: '200px'
+  rootMargin: "200px",
 });
 const lazyImg = document.querySelectorAll("img[data-src]");
 lazyImg.forEach((img) => {
   lazyObserver.observe(img);
+});
+
+const reorderslides = function () {
+  slidesElement.forEach(function (slide, i) {
+    slide.style.transform = `translateX(${100 * i}%)`;
+  });
+};
+const sliding = function () {
+  slidesElement.forEach(function (slide, i) {
+    slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
+  });
+};
+reorderslides();
+let currentSlide = 0;
+const nextSlide = function () {
+  currentSlide++;
+  if (currentSlide > slidesElement.length - 1) {
+    currentSlide = 0;
+  }
+  sliding();
+  dotsColoring(currentSlide);
+};
+const prevSlide = function () {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slidesElement.length - 1;
+  }
+  sliding();
+  dotsColoring(currentSlide);
+};
+const dotsColoring = function (activeElement) {
+  [...dotsElement.children].forEach(function (el) {
+    if (parseInt(el.dataset.dot) == activeElement) {
+      el.classList.remove("bg-[#b9b9b9]");
+      el.classList.remove("opacity-[0.7]");
+      el.classList.add("bg-[#888]");
+    } else {
+      el.classList.add("bg-[#b9b9b9]");
+      el.classList.add("opacity-[0.7]");
+      el.classList.remove("bg-[#888]");
+    }
+  });
+};
+dotsElement.addEventListener("click", function (e) {
+  const target = e.target;
+  if (target.tagName != "BUTTON") return;
+  dotsColoring(target.dataset.dot);
+  currentSlide = parseInt(target.dataset.dot);
+  sliding();
+});
+let sliderViewPort = false;
+const sliderObserver = new IntersectionObserver(function (entries, observer) {
+    const [entry] = entries;
+    if(entry.isIntersecting) sliderViewPort = true;
+    else sliderViewPort = false;
+}, {root: null, treshold: 0});
+sliderObserver.observe(sliderElement);
+rightBtnElement.addEventListener("click", nextSlide);
+leftBtnElement.addEventListener("click", prevSlide);
+window.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" && sliderViewPort) {
+    prevSlide();
+  } else if (event.key === "ArrowRight" && sliderViewPort) {
+    nextSlide();
+  }
+  dotsColoring(currentSlide);
+});
+dotsElement.addEventListener("click", function (e) {
+  const target = e.target;
+  if (target.tagName != "BUTTON") return;
+  dotsColoring(parseInt(target.dataset.dot));
+  currentSlide = parseInt(target.dataset.dot);
+  sliding();
 });
